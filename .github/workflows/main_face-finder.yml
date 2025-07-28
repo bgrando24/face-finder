@@ -22,7 +22,7 @@ jobs:
             - name: Set up Python version
               uses: actions/setup-python@v5
               with:
-                  python-version: "3.13"
+                  python-version: "3.11"
 
             - name: Create and start virtual environment
               run: |
@@ -54,6 +54,7 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                   name: python-app
+                  path: .
 
             - name: Login to Azure
               uses: azure/login@v2
@@ -68,6 +69,4 @@ jobs:
               with:
                   app-name: "face-finder"
                   slot-name: "Production"
-
-            - name: "Run FastAPI CLI commands"
-              run: fastapi run src/main.py
+                  package: .
