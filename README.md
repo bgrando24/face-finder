@@ -3,6 +3,9 @@
 **Run local dev server**
 `fastapi dev src/main.py`
 
+**Run deployment server**
+`fastapi run src/main.py`
+
 **Build docker**
 `docker build . -t face-finder`
 
