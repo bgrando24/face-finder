@@ -6,7 +6,7 @@ pip install -r requirements.txt
 source venv/bin/activate
 
 **Run local dev server**
-`fastapi dev src/main.py`
+`fastapi dev src/main.py --host 0.0.0.0 --port 8000`
 
 **Run deployment server**
 `fastapi run src/main.py`
