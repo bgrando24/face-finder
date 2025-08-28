@@ -1,5 +1,10 @@
 # Python face-finder
 
+**Create/Start python venv**
+python3 -m venv venv
+pip install -r requirements.txt
+source venv/bin/activate
+
 **Run local dev server**
 `fastapi dev src/main.py`
 
