@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 class FaceDetector:
     
     def __init__(self) -> None:
-        self.cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+        self.cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml") # type: ignore
     
     def get_img_meta(self, image: numpy.ndarray):
         """
